@@ -1,0 +1,46 @@
+Source: wpscan
+Section: non-free/utils
+Priority: extra
+Maintainer: Foxxy Dev Team <foxxy-devel@lists.foxxysec.org>
+Uploaders: Lorenzo "Palinuro" Faletra <palinuro@foxxysec.org>
+Build-Depends: debhelper (>= 9),
+               ruby,
+               rubygems,
+               bundler,
+               rubygems-integration,
+               ruby-ffi,
+               ruby-typhoeus (>= 0.8.0),
+               ruby-mini-portile2,
+               ruby-nokogiri,
+               ruby-yajl,
+               ruby-terminal-table (>= 1.6.0),
+               ruby-ruby-progressbar (>= 1.6.0~),
+               ruby-addressable,
+               unzip,
+               ruby-rspec,
+               ruby-rspec-its,
+               ruby-webmock,
+               ruby-simplecov,
+Standards-Version: 3.9.8
+Homepage: http://www.wpscan.org
+Vcs-Git: https://github.com/FoxxyOSsec/wpscan
+Vcs-Browser: https://github.com/FoxxyOSsec/wpscan
+
+Package: wpscan
+Architecture: all
+Depends:
+ ruby | ruby-interpreter,
+ rubygems,
+ bundler,
+# Directly required gems
+ ruby-ffi,
+ ruby-typhoeus (>= 1.0.0),
+ ruby-mini-portile2,
+ ruby-nokogiri (>= 1.6.7.2),
+ ruby-terminal-table (>= 1.6.0),
+ ruby-ruby-progressbar (>= 1.6.0~),
+ ruby-addressable,
+ ruby-yajl,
+ ${misc:Depends}
+Description: Black box WordPress vulnerability scanner
+ WPScan scans remote WordPress installations to find security issues.
